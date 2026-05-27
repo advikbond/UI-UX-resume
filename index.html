@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Advik Solanki | UI/UX Portfolio</title>
+    <meta
+      name="description"
+      content="UI/UX portfolio for Advik Solanki, product designer and co-founder focused on clean, research-led digital experiences."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;400;500;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href="/" aria-label="Advik Solanki home" data-home-link>AS</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-links" id="primary-nav" aria-label="Portfolio sections">
+        <a class="mobile-home-link" href="/" data-section="home">Home</a>
+        <a href="/work" data-section="work">Work</a>
+        <a href="/contact" data-section="contact">Contact</a>
+        <a class="resume-download-link" href="/assets/Advik_Solanki_Resume.pdf" download data-section="resume">Resume</a>
+        <a href="/play" data-section="play">Play</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <h1 id="hero-title">Advik Solanki</h1>
+          <p class="typing-line" aria-live="polite">
+            <span id="typing-text">Messy mind, clean design.</span><span class="typing-cursor" aria-hidden="true"></span>
+          </p>
+          <a class="scroll-link" href="#about">
+            <span>Scroll</span>
+            <img src="/assets/arrow-vector.svg" alt="" aria-hidden="true">
+          </a>
+        </div>
+      </section>
+
+      <section class="about section-shell" id="about" aria-labelledby="about-title">
+        <h2 id="about-title">About me</h2>
+        <div class="about-grid">
+          <div class="about-labels" aria-hidden="true">
+            <span>Education</span>
+            <span>Approach</span>
+            <span>Career</span>
+          </div>
+
+          <div class="about-content">
+            <article class="info-row">
+              <h3>Education</h3>
+              <p>B.Tech, Electrical &amp; Electronics Engineering<br>RV College of Engineering</p>
+            </article>
+
+            <article class="info-row">
+              <h3>Approach</h3>
+              <p>
+                Start with user research, workflow analysis, and understanding real user
+                problems. Translate insights into user flows, wireframes, prototypes,
+                and iterative design solutions.
+              </p>
+            </article>
+
+            <article class="info-row career-list" id="resume">
+              <h3>Career</h3>
+              <div>
+                <p>Product Designer &amp; Co-Founder, 8Answers</p>
+                <span>(Sep 2025 - Current)</span>
+                <p>Product Intern, Wiingy</p>
+                <span>(Jun 2025 - Aug 2025)</span>
+                <p>Business Development Intern, CHINT India Energy Solution Pvt. Ltd.</p>
+                <span>(Jan 2025 - Jun 2025)</span>
+                <p>Research &amp; Development Intern, Indxo AI</p>
+                <span>(Sep 2024 - Nov 2024)</span>
+              </div>
+            </article>
+          </div>
+
+          <figure class="portrait-frame">
+            <img src="/assets/advik-portrait-crop.png" alt="Black and white portrait of Advik Solanki">
+          </figure>
+        </div>
+      </section>
+
+      <section class="work section-shell" id="work" aria-labelledby="work-title">
+        <h2 id="work-title">Work</h2>
+        <div class="work-grid">
+          <a class="work-card" href="/8answers" aria-label="View 8Answers project">
+            <img class="work-card-image" src="/assets/work-8answers.png" alt="8Answers dashboard interface preview">
+            <div class="work-card-copy">
+              <h3>8Answers</h3>
+              <p>Real Estate Project Management Platform</p>
+              <span>15+ Active Users • Windows &amp; macOS</span>
+              <p>
+                A desktop-first workflow platform that streamlines project management,
+                approvals, and collaboration for real estate teams through intuitive
+                role-based experiences.
+              </p>
+            </div>
+            <span class="work-card-link">
+              <span>View</span>
+              <img src="/assets/work-arrow.svg" alt="" aria-hidden="true">
+            </span>
+          </a>
+
+          <a class="work-card" href="/whatihad.info" aria-label="View whatihad.info project">
+            <img class="work-card-image" src="/assets/work-whatihad.png" alt="whatihad.info mobile nutrition app preview">
+            <div class="work-card-copy">
+              <h3>whatihad.info</h3>
+              <p>AI Nutrition Tracking Platform</p>
+              <span>20+ Early Users • Web • iOS • Android</span>
+              <p>
+                A mobile-first nutrition platform that combines calorie tracking,
+                budget-aware meal planning, and AI-powered recommendations to help users
+                make healthier food decisions.
+              </p>
+            </div>
+            <span class="work-card-link">
+              <span>View</span>
+              <img src="/assets/work-arrow.svg" alt="" aria-hidden="true">
+            </span>
+          </a>
+
+          <a class="work-card" href="/yarddeck" aria-label="View Yard Deck project">
+            <img class="work-card-image" src="/assets/work-yarddeck.png" alt="Yard Deck sports event platform preview">
+            <div class="work-card-copy">
+              <h3>Yard Deck</h3>
+              <p>Sports Event Management Platform</p>
+              <span>400+ Registrations • 3 Live Events</span>
+              <p>
+                A sports event platform that streamlines registrations, waitlists,
+                onboarding, and payment workflows for organizers and participants
+                through a simple and intuitive experience.
+              </p>
+            </div>
+            <span class="work-card-link">
+              <span>View</span>
+              <img src="/assets/work-arrow.svg" alt="" aria-hidden="true">
+            </span>
+          </a>
+        </div>
+      </section>
+
+      <section class="contact section-shell" id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
+        <div class="contact-copy">
+          <p>Let's build something meaningful together.</p>
+          <p>
+            Whether it's a full-time opportunity, internship, freelance project, or just an
+            interesting idea, I'd love to hear from you.
+          </p>
+        </div>
+        <div class="contact-actions">
+          <a class="contact-action" href="mailto:solankiadvik@gmail.com">
+            <img class="contact-action-icon" src="/assets/contact-gmail.svg" alt="" aria-hidden="true">
+            <span>solankiadvik@gmail.com</span>
+            <img class="contact-action-arrow" src="/assets/contact-arrow.svg" alt="" aria-hidden="true">
+          </a>
+          <a class="contact-action" href="https://www.linkedin.com/in/advik-solanki" target="_blank" rel="noreferrer">
+            <img class="contact-action-icon" src="/assets/contact-linkedin.svg" alt="" aria-hidden="true">
+            <span>linkedin</span>
+            <img class="contact-action-arrow" src="/assets/contact-arrow.svg" alt="" aria-hidden="true">
+          </a>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer section-shell">
+      <p>Thanks for stopping by.</p>
+      <p>&copy; 2026 Advik Solanki</p>
+    </footer>
+
+    <script src="/script.js"></script>
+  </body>
+</html>

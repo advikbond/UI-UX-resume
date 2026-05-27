@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Play | Advik Solanki</title>
+    <meta name="description" content="Interactive cricket batting simulator by Advik Solanki.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;400;500;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href="/" aria-label="Advik Solanki home" data-home-link>AS</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-links" id="primary-nav" aria-label="Portfolio sections">
+        <a class="mobile-home-link" href="/" data-section="home">Home</a>
+        <a href="/work" data-section="work">Work</a>
+        <a href="/contact" data-section="contact">Contact</a>
+        <a class="resume-download-link" href="/assets/Advik_Solanki_Resume.pdf" download data-section="resume">Resume</a>
+        <a href="/play" data-section="play">Play</a>
+      </nav>
+    </header>
+
+    <main class="play-page">
+      <section class="play section-shell" id="play" aria-labelledby="play-title">
+        <h1 class="visually-hidden" id="play-title">Cricket batting simulator</h1>
+        <div class="cricket-game" data-cricket-game>
+          <canvas class="cricket-canvas" data-cricket-canvas aria-label="Cricket batting simulator"></canvas>
+          <div class="cricket-overlay">
+            <div class="cricket-hud">
+              <div class="cricket-hud-card">
+                <span>Score</span>
+                <strong data-cricket-score>0</strong>
+              </div>
+              <div class="cricket-hud-card">
+                <span>Target</span>
+                <strong data-cricket-target>-</strong>
+              </div>
+              <div class="cricket-hud-card">
+                <span>Balls Left</span>
+                <strong data-cricket-balls>30</strong>
+                <em data-cricket-required></em>
+              </div>
+            </div>
+            <button class="cricket-restart-control" type="button" data-cricket-reset>Restart</button>
+            <div class="cricket-delivery" data-cricket-delivery></div>
+            <div class="cricket-message" data-cricket-message></div>
+            <div class="cricket-submessage" data-cricket-submessage></div>
+            <div class="cricket-ball-row" data-cricket-ball-row></div>
+            <div class="cricket-instruction" data-cricket-instruction>Press Space to play</div>
+          </div>
+          <div class="cricket-screen" data-cricket-start>
+            <h3>Cricket</h3>
+            <p>Batting simulator</p>
+            <span>Press Space to play · 30 balls · target 30-90</span>
+            <span>Time your shots by pressing Space as the ball reaches the batter for better runs.</span>
+            <button type="button" data-cricket-start-button>Start innings</button>
+          </div>
+          <div class="cricket-screen cricket-screen-end" data-cricket-end hidden>
+            <h3 data-cricket-end-title>Over</h3>
+            <p data-cricket-end-result></p>
+            <strong data-cricket-end-score></strong>
+            <div class="cricket-end-stats">
+              <span data-cricket-stat-one></span>
+              <span data-cricket-stat-two></span>
+              <span data-cricket-stat-three></span>
+            </div>
+            <button type="button" data-cricket-restart-button>Play again</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer section-shell">
+      <p>Thanks for stopping by.</p>
+      <p>&copy; 2026 Advik Solanki</p>
+    </footer>
+
+    <script src="/script.js"></script>
+    <script src="/cricket-simulator.js"></script>
+  </body>
+</html>

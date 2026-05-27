@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>8Answers | Advik Solanki</title>
+    <meta name="description" content="8Answers UI/UX case study by Advik Solanki.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;400;500;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href="/" aria-label="Advik Solanki home" data-home-link>AS</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-links" id="primary-nav" aria-label="Portfolio sections">
+        <a class="mobile-home-link" href="/" data-section="home">Home</a>
+        <a href="/work" data-section="work">Work</a>
+        <a href="/contact" data-section="contact">Contact</a>
+        <a class="resume-download-link" href="/assets/Advik_Solanki_Resume.pdf" download data-section="resume">Resume</a>
+        <a href="/play" data-section="play">Play</a>
+      </nav>
+    </header>
+
+    <aside class="case-toc" aria-label="8Answers page sections">
+      <button class="case-toc-toggle" type="button" aria-expanded="false" aria-controls="case-toc-menu">
+        Sections
+      </button>
+      <nav class="case-toc-menu" id="case-toc-menu">
+        <a href="#case-top">Overview</a>
+        <a href="#problem">Problem</a>
+        <a href="#research">Research</a>
+        <a class="case-toc-sub" href="#research-developers">Developers</a>
+        <a class="case-toc-sub" href="#research-investors">Investors / Partners</a>
+        <a class="case-toc-sub" href="#research-agents">Sales Agents</a>
+        <a class="case-toc-sub" href="#research-managers">Project Managers</a>
+        <a class="case-toc-sub" href="#research-buyers">Property Buyers</a>
+        <a href="#ui-logo-exploration">UI &amp; Logo Exploration</a>
+        <a href="#solution">Solution</a>
+        <a class="case-toc-sub" href="#executive-dashboard">Executive Dashboard</a>
+        <a class="case-toc-sub" href="#project-setup">Project Setup</a>
+        <a class="case-toc-sub" href="#layout-management">Layout &amp; Plot Management</a>
+        <a class="case-toc-sub" href="#agent-workspace">Agent Workspace</a>
+        <a class="case-toc-sub" href="#document-management">Document Management</a>
+        <a class="case-toc-sub" href="#project-reports">Project Reports</a>
+        <a class="case-toc-sub" href="#cloud-sync">Cloud Sync</a>
+        <a href="#reflection">Reflection</a>
+        <a href="#final-takeaway">Final Takeaway</a>
+      </nav>
+    </aside>
+
+    <main class="case-page eightanswers-page">
+      <section class="case-section section-shell case-hero" id="case-top">
+        <h1>8Answers</h1>
+        <img class="case-hero-image" src="/assets/8answers/hero.png" alt="8Answers desktop app shown on multiple devices">
+        <div class="case-facts">
+          <div class="case-row">
+            <h3>Platform Link</h3>
+            <p><a class="case-link" href="https://8answers.com/" target="_blank" rel="noreferrer">www.8answers.com</a></p>
+          </div>
+          <div class="case-row">
+            <h3>Overview</h3>
+            <p>
+              8Answers is a collaborative real estate management platform that helps
+              developers, investors, project managers, and sales agents manage the complete
+              life-cycle of a real estate project; from land acquisition and development
+              planning to financial tracking, commission management, and property sales.
+              The platform centralizes project operations, reporting, and marketplace
+              functionality within a secure role-based ecosystem.
+            </p>
+          </div>
+          <div class="case-card-grid" aria-label="8Answers project summary">
+            <article>
+              <h3>Platform</h3>
+              <p>Desktop Application<br>(macOS &amp; Windows)</p>
+            </article>
+            <article>
+              <h3>Research &amp; Validation</h3>
+              <ul>
+                <li>10+ User Interviews</li>
+                <li>15+ Active Users</li>
+              </ul>
+            </article>
+            <article>
+              <h3>Key Capabilities</h3>
+              <ul>
+                <li>Offline-First</li>
+                <li>Cloud Sync</li>
+                <li>End-to-end encryption (E2EE)</li>
+                <li>Role-Based Access</li>
+                <li>Real-Time Reporting</li>
+              </ul>
+            </article>
+          </div>
+          <div class="case-row">
+            <h3>My Contribution</h3>
+            <ul>
+              <li>Led strategy, planning, and feature prioritization from concept to deployment.</li>
+              <li>Conducted stakeholder interviews across developers, investors, and agents.</li>
+              <li>Designed user flows, wireframes, prototypes, and the complete design system.</li>
+              <li>Covered financial tracking, project management, reporting, and marketplace modules.</li>
+              <li>Worked closely with developers on database planning, workflows, and iterations.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reflection and Final Takeaway moved to follow Solution -->
+
+      <section class="case-section section-shell" id="problem">
+        <h2 class="case-heading">Problem</h2>
+        <div class="case-card-grid case-card-grid-three">
+          <article>
+            <h3>Info</h3>
+            <p>Manual, fragmented financial management in regional land projects.</p>
+          </article>
+          <article>
+            <h3>Key Challenges</h3>
+            <ul>
+              <li>Unclear profit-sharing among partners</li>
+              <li>Manual commission calculations for agents</li>
+              <li>Scattered project information</li>
+              <li>No affordable software tailored for land developers</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Business Impact</h3>
+            <ul>
+              <li>Reduced stakeholder trust</li>
+              <li>Slower decision-making</li>
+              <li>Increased operational overhead</li>
+              <li>Financial reporting inaccuracies</li>
+              <li>Revenue leakage and profit loss</li>
+              <li>Limited ability to scale across multiple projects</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="case-section section-shell" id="research">
+        <img class="case-feature-image" src="/assets/8answers/process.png" alt="8Answers workflow shown on a laptop">
+        <h2 class="case-heading">Research</h2>
+        <div class="case-card-grid case-card-grid-stakeholders">
+          <article id="research-developers">
+            <h3>Developers</h3>
+            <ul>
+              <li>Difficulty tracking project expenses</li>
+              <li>No centralized financial records</li>
+              <li>Limited visibility into project profitability</li>
+              <li>Delayed financial reporting</li>
+              <li>Managing multiple projects through spreadsheets</li>
+              <li>Time-consuming manual record keeping</li>
+            </ul>
+          </article>
+          <article id="research-investors">
+            <h3>Investors / Partners</h3>
+            <ul>
+              <li>No real-time visibility into investments</li>
+              <li>Unclear profit-sharing calculations</li>
+              <li>Difficulty verifying expenses</li>
+              <li>Limited access to project performance data</li>
+              <li>Delayed financial updates</li>
+              <li>Trust issues due to lack of transparency</li>
+            </ul>
+          </article>
+          <article id="research-agents">
+            <h3>Sales Agents</h3>
+            <ul>
+              <li>Manual commission calculations</li>
+              <li>No clear commission tracking</li>
+              <li>Difficulty tracking available plots</li>
+              <li>Scattered customer information</li>
+              <li>Delayed commission settlements</li>
+              <li>Lack of centralized sales records</li>
+            </ul>
+          </article>
+          <article id="research-managers">
+            <h3>Project Managers</h3>
+            <ul>
+              <li>Information spread across multiple tools</li>
+              <li>Manual project progress tracking</li>
+              <li>Poor stakeholder coordination</li>
+              <li>Time-consuming report preparation</li>
+              <li>Difficulty monitoring expenses and activities</li>
+              <li>Lack of standardized workflows</li>
+            </ul>
+          </article>
+          <article id="research-buyers">
+            <h3>Property Buyers</h3>
+            <ul>
+              <li>Limited access to verified project information</li>
+              <li>Unclear plot availability</li>
+              <li>Lack of pricing transparency</li>
+              <li>Dependency on agents for updates</li>
+              <li>Fragmented buying process</li>
+              <li>Limited trust in project information</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <img class="case-wide-image" src="/assets/8answers/research-band.png" alt="Real estate team discussion">
+
+      <!-- Problem section will be placed before Research -->
+
+      <section class="case-section section-shell" id="ui-logo-exploration">
+        <h2 class="case-heading">UI &amp; Logo Exploration</h2>
+        <div class="case-row">
+          <h3>Info</h3>
+          <div>
+            <p>
+              The 8Answers identity was designed to represent continuous solutions for
+              complex real estate workflows. The logo symbol is derived from the number 8,
+              shaped into an infinity-inspired form representing growth, collaboration, and
+              connected workflows across projects, finances, stakeholders, and property sales.
+            </p>
+            <p>
+              The UI direction focused on clean dashboards, structured layouts, and
+              simplified workflows for both technical and non-technical users. The primary
+              color #0C8CE9 was chosen to represent trust, reliability, professionalism, and
+              a sense of safety within financial and project management experiences.
+            </p>
+          </div>
+        </div>
+        <div class="eightanswers-ui-logo-exploration">
+          <img src="/assets/8answers/ui-logo-exploration_main.png" width="5588" height="1509" alt="8Answers UI and logo exploration showing typography, logo mark, wordmark, and color palette">
+        </div>
+      </section>
+
+      <section class="case-section section-shell" id="solution">
+        <h2 class="case-heading">Solution</h2>
+        <div class="case-row">
+          <h3>Overview</h3>
+          <div>
+            <p>
+              Designed a role-based real estate management platform that combines project
+              operations, financial tracking, commission management, interactive layout
+              planning, and property sales into a single system.
+            </p>
+            <ul>
+              <li>Built for plot-based projects</li>
+              <li>Automated profit distribution</li>
+              <li>Role Based Access Control (Admin, Partner, Project Manager, Agent)</li>
+              <li>Agent &amp; manager commission automation</li>
+              <li>Simple desktop friendly interface</li>
+              <li>End to End Encrypted Platform</li>
+              <li>Works Online and Offline</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="screen-list">
+          <article class="screen-item" id="executive-dashboard">
+            <h3>Executive Dashboard</h3>
+            <p>A clear overview of project performance, financials, sales, inventory, partner investments, project manager activity, and agent commissions.</p>
+            <div class="screen-carousel" data-carousel>
+              <button class="screen-carousel-button screen-carousel-button-prev" type="button" data-carousel-prev aria-label="Previous Executive Dashboard image">
+                <span aria-hidden="true">&lt;</span>
+              </button>
+              <div class="screen-carousel-track">
+                <img class="is-active" src="/assets/8answers/figma/executive-dashboard-1.png" alt="Executive dashboard overview with partner profit distribution and owner-wise plot distribution">
+                <img src="/assets/8answers/figma/executive-dashboard-2.png" alt="Executive dashboard accounting earnings and ledger table">
+                <img src="/assets/8answers/figma/executive-dashboard-3.png" alt="Executive dashboard sales summary and sales activity">
+                <img src="/assets/8answers/figma/executive-dashboard-4.png" alt="Executive dashboard performance cards for plot booking and area wise sales">
+              </div>
+              <button class="screen-carousel-button screen-carousel-button-next" type="button" data-carousel-next aria-label="Next Executive Dashboard image">
+                <span aria-hidden="true">&gt;</span>
+              </button>
+              <p class="screen-carousel-count" aria-live="polite">1 / 4</p>
+            </div>
+          </article>
+          <article class="screen-item" id="project-setup">
+            <h3>Project Setup &amp; Management</h3>
+            <p>Simplified project creation with structured forms for project details, area information, partners, expenses, plots, amenities, and team assignments.</p>
+            <div class="screen-carousel" data-carousel>
+              <button class="screen-carousel-button screen-carousel-button-prev" type="button" data-carousel-prev aria-label="Previous Project Setup image">
+                <span aria-hidden="true">&lt;</span>
+              </button>
+              <div class="screen-carousel-track">
+                <img class="is-active" src="/assets/8answers/figma/project-setup-1.png" alt="Project setup screen for site details and plot layout table">
+                <img src="/assets/8answers/figma/project-setup-2.png" alt="Project setup screen for area details and amenities">
+              </div>
+              <button class="screen-carousel-button screen-carousel-button-next" type="button" data-carousel-next aria-label="Next Project Setup image">
+                <span aria-hidden="true">&gt;</span>
+              </button>
+              <p class="screen-carousel-count" aria-live="polite">1 / 2</p>
+            </div>
+          </article>
+          <article class="screen-item" id="layout-management">
+            <h3>Layout &amp; Plot Management</h3>
+            <p>Interactive layout management for plot inventory, availability, and project-level land planning.</p>
+            <div class="screen-carousel" data-carousel>
+              <button class="screen-carousel-button screen-carousel-button-prev" type="button" data-carousel-prev aria-label="Previous Layout and Plot Management image">
+                <span aria-hidden="true">&lt;</span>
+              </button>
+              <div class="screen-carousel-track">
+                <img class="is-active" src="/assets/8answers/figma/layout-plot-1.png" alt="Plot status screen with layout inventory and plot status details">
+                <img src="/assets/8answers/figma/layout-plot-2.png" alt="Interactive plot layout view with drawing tools and plot markers">
+              </div>
+              <button class="screen-carousel-button screen-carousel-button-next" type="button" data-carousel-next aria-label="Next Layout and Plot Management image">
+                <span aria-hidden="true">&gt;</span>
+              </button>
+              <p class="screen-carousel-count" aria-live="polite">1 / 2</p>
+            </div>
+          </article>
+          <article class="screen-item" id="agent-workspace">
+            <h3>Agent Workspace</h3>
+            <p>Enable agents to view plot inventory, availability status, and layout-wise property information.</p>
+            <img src="/assets/8answers/agent.png" alt="8Answers agent workspace screen">
+          </article>
+          <article class="screen-item" id="document-management">
+            <h3>Centralized Document Management</h3>
+            <p>Store and organize contracts, approvals, photos, drawings, reports, and other project-related files in one place.</p>
+            <img src="/assets/8answers/documents.png" alt="8Answers document management screen">
+          </article>
+          <article class="screen-item" id="project-reports">
+            <h3>Automated Project Reports</h3>
+            <p>Generate comprehensive reports covering finances, investments, expenses, commissions, inventory, and sales performance.</p>
+            <img class="report-image" src="/assets/8answers/reports.png" alt="8Answers automated project report screen">
+          </article>
+          <article class="screen-item" id="cloud-sync">
+            <h3>Cloud Sync &amp; Team Collaboration</h3>
+            <p>Control synchronization between offline and online data, and securely share project access with stakeholders using email-based invitations.</p>
+            <div class="screen-carousel" data-carousel>
+              <button class="screen-carousel-button screen-carousel-button-prev" type="button" data-carousel-prev aria-label="Previous Cloud Sync and Team Collaboration image">
+                <span aria-hidden="true">&lt;</span>
+              </button>
+              <div class="screen-carousel-track">
+                <img class="is-active" src="/assets/8answers/figma/cloud-sync-1.png" alt="Team access control settings with role selection and email invitations">
+                <img src="/assets/8answers/figma/cloud-sync-2.png" alt="Project settings screen for cloud sync and project status controls">
+              </div>
+              <button class="screen-carousel-button screen-carousel-button-next" type="button" data-carousel-next aria-label="Next Cloud Sync and Team Collaboration image">
+                <span aria-hidden="true">&gt;</span>
+              </button>
+              <p class="screen-carousel-count" aria-live="polite">1 / 2</p>
+            </div>
+          </article>
+          <article class="screen-item" id="status-of-project">
+            <h3>Status of Project</h3>
+            <p>Clear sync and connection status states help users understand whether work is saved locally, synced online, still uploading, delayed, or blocked by network issues.</p>
+            <div class="status-image-grid" aria-label="Project status states for saved locally, online, syncing, poor connection, saved and synced, saving, and no network">
+              <img src="/assets/8answers/figma/status-figma-1.png" alt="Status screenshot 1">
+              <img src="/assets/8answers/figma/status-figma-2.png" alt="Status screenshot 2">
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="case-section section-shell" id="reflection">
+        <h2 class="case-heading">Reflection</h2>
+        <div class="case-card-grid case-card-grid-three">
+          <article>
+            <h3>What Worked Well</h3>
+            <ul>
+              <li>Focused on creating a simple and intuitive user experience for stakeholders with limited software familiarity.</li>
+              <li>Designed clear dashboards and structured workflows that reduced complexity and improved visibility into project data.</li>
+              <li>Used familiar patterns and terminology to minimize the learning curve for users transitioning from tools like Tally and Zoho.</li>
+              <li>Role-based interfaces helped users focus only on information relevant to their responsibilities.</li>
+              <li>Desktop-first layouts allowed better presentation of financial data, reports, project layouts, and inventory management.</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Challenges &amp; Learnings</h3>
+            <ul>
+              <li>The initial mobile-first approach was difficult for users to navigate due to the large number of features and workflows compressed into a small screen.</li>
+              <li>Many target users were 40+ years old and preferred larger screens for reviewing financial information, layouts, and reports.</li>
+              <li>Complex project management workflows became harder to understand on mobile devices because of limited screen space and multiple navigation layers.</li>
+              <li>Through user testing and feedback, it became clear that a desktop experience aligned better with existing user behavior and work processes.</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Key Outcome</h3>
+            <ul>
+              <li>Shifting from a mobile-focused design to a desktop-first experience was the biggest product and UX improvement.</li>
+              <li>The transition significantly improved usability, reduced confusion, simplified navigation, and increased adoption among project owners, partners, and managers.</li>
+              <li>The final design prioritized clarity over feature density, making the platform easier to learn and use for non-technical users.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="case-section section-shell" id="final-takeaway">
+        <h2 class="case-heading">Final Takeaway</h2>
+        <div class="case-facts">
+          <div class="case-row">
+            <h3>Summary</h3>
+            <p>This project taught me that successful product design is not about fitting more features into an interface, but about understanding user behavior and creating workflows that feel familiar, intuitive, and efficient. The decision to move from a mobile-first approach to a desktop-first experience reinforced the importance of validating design decisions through real user feedback rather than assumptions.</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer section-shell" id="play">
+      <p>Thanks for stopping by.</p>
+      <p>&copy; 2026 Advik Solanki</p>
+    </footer>
+
+    <script src="/script.js"></script>
+  </body>
+</html>

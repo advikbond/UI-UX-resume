@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>whatihad.info | Advik Solanki</title>
+    <meta name="description" content="whatihad.info UI/UX case study by Advik Solanki.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;400;500;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href="/" aria-label="Advik Solanki home" data-home-link>AS</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-links" id="primary-nav" aria-label="Portfolio sections">
+        <a class="mobile-home-link" href="/" data-section="home">Home</a>
+        <a href="/work" data-section="work">Work</a>
+        <a href="/contact" data-section="contact">Contact</a>
+        <a class="resume-download-link" href="/assets/Advik_Solanki_Resume.pdf" download data-section="resume">Resume</a>
+        <a href="/play" data-section="play">Play</a>
+      </nav>
+    </header>
+
+    <aside class="case-toc" aria-label="whatihad.info page sections">
+      <button class="case-toc-toggle" type="button" aria-expanded="false" aria-controls="case-toc-menu">
+        Sections
+      </button>
+      <nav class="case-toc-menu" id="case-toc-menu">
+        <a href="#case-top">Overview</a>
+        <a class="case-toc-sub" href="#platform-link">Platform Link</a>
+        <a class="case-toc-sub" href="#project-info">Info</a>
+        <a class="case-toc-sub" href="#research-validation">Research &amp; Validation</a>
+        <a class="case-toc-sub" href="#my-contribution">My Contribution</a>
+        <a href="#defining-product">Defining the Product</a>
+        <a class="case-toc-sub" href="#core-question">Core Question</a>
+        <a class="case-toc-sub" href="#bellyo-ai">Bellyo AI</a>
+        <a href="#case-overview">Problem &amp; Goal</a>
+        <a class="case-toc-sub" href="#problem">Problem</a>
+        <a class="case-toc-sub" href="#goal">The Goal</a>
+        <a class="case-toc-sub" href="#outcome">Outcome</a>
+        <a href="#research-discovery">Research &amp; Discovery</a>
+        <a class="case-toc-sub" href="#existing-apps">Existing Apps</a>
+        <a class="case-toc-sub" href="#key-insights">Key Insights</a>
+        <a href="#onboarding">Information Architecture</a>
+        <a class="case-toc-sub" href="#ia-onboarding">Onboarding</a>
+        <a class="case-toc-sub" href="#ia-home">Home</a>
+        <a class="case-toc-sub" href="#ia-account">Account</a>
+        <a class="case-toc-sub" href="#ia-history">History</a>
+        <a class="case-toc-sub" href="#ia-add">Add</a>
+        <a href="#designing-experience">Designing the Experience</a>
+        <a class="case-toc-sub" href="#track-basics">Track the 8 Basics</a>
+        <a class="case-toc-sub" href="#other-features">Other Features</a>
+        <a href="#ui-exploration">UI Exploration</a>
+        <a href="#reflection">Reflection</a>
+        <a class="case-toc-sub" href="#what-worked-well">What Worked Well</a>
+        <a class="case-toc-sub" href="#challenges-learnings">Challenges &amp; Learnings</a>
+        <a class="case-toc-sub" href="#key-outcome">Key Outcome</a>
+        <a href="#final-takeaway">Final Takeaway</a>
+      </nav>
+    </aside>
+
+    <main class="case-page whatihad-page">
+      <section class="case-section section-shell case-hero whatihad-hero" id="case-top">
+        <h1>whatihad.info</h1>
+        <figure class="whatihad-hero-media">
+          <img src="/assets/whatihad.info/hero.png" alt="whatihad.info mobile app shown beside a meal">
+        </figure>
+        <div class="case-facts">
+          <div class="case-row" id="platform-link">
+            <h3>Platform Link</h3>
+            <p>
+              <a class="case-link whatihad-link" href="https://whatihad.info/" target="_blank" rel="noreferrer">www.whatihad.info</a>
+              <img class="whatihad-link-arrow" src="/assets/work-arrow.svg" alt="" aria-hidden="true">
+            </p>
+          </div>
+          <div class="case-row" id="project-info">
+            <h3>Info</h3>
+            <p>
+              whatihad.info is a nutrition and budgeting platform that helps users make
+              informed food choices through simple nutrition tracking, localized food
+              pricing, and AI-powered suggestions from Bellyo.
+            </p>
+          </div>
+          <div class="case-row" id="platform">
+            <h3>Platform</h3>
+            <p>Mobile App (iOS and Android) &amp; Web</p>
+          </div>
+          <div class="case-row" id="research-validation">
+            <h3>Research &amp; Validation</h3>
+            <ul>
+              <li>30+ User Interviews</li>
+              <li>20+ Early Users</li>
+            </ul>
+          </div>
+          <div class="case-row" id="my-contribution">
+            <h3>My Contribution</h3>
+            <ul>
+              <li>Product Strategy: Defined the product vision around affordable nutrition.</li>
+              <li>UX Research: Conducted competitor analysis and identified user pain points.</li>
+              <li>Information Architecture: Structured navigation, food discovery, and AI recommendation flows.</li>
+              <li>UI Design: Designed screens, design system, and responsive layouts.</li>
+              <li>Prototyping: Created interactive prototypes and user flows.</li>
+              <li>Product Development: Collaborated on implementation and feature prioritization.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section section-shell" id="defining-product">
+        <h2 class="case-heading">Defining the Product</h2>
+        <div class="case-row" id="core-question">
+          <h3>Core Question</h3>
+          <p>How might we help users make healthier food choices without ignoring their budget?</p>
+        </div>
+
+        <div class="bellyo-ai-block">
+          <div class="case-row" id="bellyo-ai">
+            <h3>Bellyo AI</h3>
+            <p>How might we make AI-powered nutrition guidance feel approachable, engaging, and trustworthy for everyday users?</p>
+          </div>
+          <div class="bellyo-download-area" data-download-tooltip aria-label="Download Bellyo mascot images">
+            <div class="bellyo-mascot-grid" data-mascot-grid></div>
+            <span class="download-cursor-label" aria-hidden="true">Click to download</span>
+          </div>
+          <button class="bellyo-refresh-button" type="button" data-refresh-mascots>
+            <span>Refresh</span>
+            <span class="bellyo-refresh-icon" aria-hidden="true"></span>
+          </button>
+          <div class="bellyo-design-note">
+            <p>
+              I used an AI tool to create Bellyo, a friendly banana mascot that guides users
+              through the product. The character makes AI food recommendations feel more
+              conversational and approachable. A banana felt like the right mascot because it
+              is healthy, recognizable, and naturally connected to nutrition.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section section-shell" id="case-overview">
+        <h2 class="case-heading">Overview</h2>
+        <div class="case-facts">
+          <div class="case-row" id="problem">
+            <h3>Problem</h3>
+            <p>Most nutrition apps focus heavily on calorie tracking while overlooking affordability.</p>
+          </div>
+          <div class="case-row" id="goal">
+            <h3>The Goal</h3>
+            <div>
+              <p>Create a simple nutrition app that helps users:</p>
+              <ul>
+                <li>Track essential nutrition values</li>
+                <li>Understand food costs</li>
+                <li>Discover affordable alternatives</li>
+                <li>Receive AI-powered food suggestions</li>
+              </ul>
+            </div>
+          </div>
+          <div class="case-row" id="outcome">
+            <h3>Outcome</h3>
+            <ul>
+              <li>1,500+ foods in database</li>
+              <li>Multi-currency support</li>
+              <li>Budget-aware food recommendations</li>
+              <li>Bellyo AI integration</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section section-shell" id="research-discovery">
+        <h2 class="case-heading">Research &amp; Discovery</h2>
+        <div class="case-facts">
+          <div class="case-row" id="existing-apps">
+            <h3>Understanding Existing Apps</h3>
+            <div class="whatihad-research-stack">
+              <div>
+                <p>Examples:</p>
+                <ul>
+                  <li>MyFitnessPal</li>
+                  <li>Cronometer</li>
+                  <li>Yazio</li>
+                </ul>
+              </div>
+              <div>
+                <p>Findings:</p>
+                <ul>
+                  <li>Complex interfaces</li>
+                  <li>Heavy focus on calorie counting</li>
+                  <li>No affordability awareness</li>
+                  <li>Limited localized food recommendations</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="case-row" id="key-insights">
+            <h3>Key Insights</h3>
+            <div class="whatihad-insight-grid">
+              <article>
+                <h4>Users want</h4>
+                <ul>
+                  <li>Simpler nutrition information tracking</li>
+                  <li>Affordable food options</li>
+                  <li>Fast food search</li>
+                  <li>Practical recommendations</li>
+                </ul>
+              </article>
+              <article>
+                <h4>Not</h4>
+                <ul>
+                  <li>100+ nutrient metrics</li>
+                  <li>Complex charts</li>
+                  <li>Scientific dashboards</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section section-shell whatihad-architecture-section" id="onboarding">
+        <h2 class="case-heading">Information Architecture</h2>
+        <div class="whatihad-architecture-design" aria-label="whatihad.info information architecture design">
+          <img class="whatihad-ia-screen-band whatihad-ia-screen-band-main" src="/assets/whatihad.info/ia-app-screens.png" alt="whatihad.info app screens for dashboard, food logging, account, and budget tracking">
+          <img class="whatihad-ia-screen-band whatihad-ia-screen-band-secondary" src="/assets/whatihad.info/ia-bellyo-screens.png" alt="Bellyo AI chat and assistant screens">
+
+          <div class="whatihad-figma-panel whatihad-onboarding-flow" id="ia-onboarding">
+            <h3>Onboarding</h3>
+            <img class="whatihad-ia-export whatihad-ia-export-onboarding" src="/assets/whatihad.info/ia-onboarding@4x.png" width="935" height="392" alt="Onboarding information architecture flow">
+          </div>
+
+          <div class="whatihad-figma-panel whatihad-simple-flow" id="ia-home">
+            <h3>Home</h3>
+            <img class="whatihad-ia-export whatihad-ia-export-home" src="/assets/whatihad.info/ia-home@4x.png" width="379" height="91" alt="Home information architecture flow">
+          </div>
+
+          <div class="whatihad-figma-panel whatihad-simple-flow" id="ia-account">
+            <h3>Account</h3>
+            <img class="whatihad-ia-export whatihad-ia-export-account" src="/assets/whatihad.info/ia-account@4x.png" width="411" height="320" alt="Account information architecture flow">
+          </div>
+
+          <div class="whatihad-figma-panel whatihad-simple-flow" id="ia-history">
+            <h3>History</h3>
+            <img class="whatihad-ia-export whatihad-ia-export-history" src="/assets/whatihad.info/ia-history@4x.png" width="411" height="100" alt="History information architecture flow">
+          </div>
+
+          <div class="whatihad-figma-panel whatihad-add-flow" id="ia-add">
+            <h3>Add</h3>
+            <img class="whatihad-ia-export whatihad-ia-export-add" src="/assets/whatihad.info/ia-add@4x.png" width="799" height="549" alt="Add information architecture flow">
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section section-shell" id="designing-experience">
+        <h2 class="case-heading">Designing the Experience</h2>
+        <div class="case-row" id="track-basics">
+          <h3>Track the 8 Basics That Matter</h3>
+          <div class="whatihad-basics-grid">
+            <article>
+              <h4>Calories</h4>
+              <p>Daily energy intake</p>
+            </article>
+            <article>
+              <h4>Protein</h4>
+              <p>Muscle and recovery support</p>
+            </article>
+            <article>
+              <h4>Carbs</h4>
+              <p>Primary energy source</p>
+            </article>
+            <article>
+              <h4>Fat</h4>
+              <p>Essential nutrition balance</p>
+            </article>
+            <article>
+              <h4>Fiber</h4>
+              <p>Digestive health tracking</p>
+            </article>
+            <article>
+              <h4>Sugar</h4>
+              <p>Added sweetness awareness</p>
+            </article>
+            <article>
+              <h4>Sodium</h4>
+              <p>Salt intake visibility</p>
+            </article>
+            <article>
+              <h4>Cost</h4>
+              <p>Budget-aware food choices</p>
+            </article>
+          </div>
+        </div>
+        <div class="case-row" id="other-features">
+          <h3>Other Features</h3>
+          <div class="whatihad-feature-card-grid">
+            <article>
+              <h4>Water Intake Tracker</h4>
+              <p>Track daily water consumption and monitor hydration goals through a simple visual progress system.</p>
+            </article>
+            <article>
+              <h4>Custom Food Entry</h4>
+              <p>Add personal meals and food items not available in the database, allowing users to maintain accurate nutrition records.</p>
+            </article>
+            <article>
+              <h4>Bellyo AI Suggestions</h4>
+              <p>Receive personalized food recommendations based on nutrition goals, budget, dietary preferences, and local food pricing.</p>
+            </article>
+            <article>
+              <h4>Nutrition Timeline</h4>
+              <p>View daily food history and nutrition activity through a chronological timeline, making it easier to review eating habits and track progress over time.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section section-shell" id="ui-exploration">
+        <h2 class="case-heading">UI Exploration</h2>
+        <div class="whatihad-ui-exploration">
+          <img src="/assets/Frame%20730%20(1).png" width="5588" height="2000" alt="whatihad.info UI exploration screens">
+        </div>
+      </section>
+
+      <section class="case-section section-shell whatihad-reflection" id="reflection">
+        <h2 class="case-heading">Reflection</h2>
+        <div class="whatihad-reflection-stack">
+          <div class="whatihad-reflection-row" id="what-worked-well">
+            <h4>What Worked Well</h4>
+            <ul>
+              <li>
+                <strong>Bellyo AI Mascot:</strong> Creating Bellyo as a friendly banana mascot helped make nutrition feel approachable rather than overwhelming. The character added personality to the product and transformed AI interactions into a more conversational and engaging experience.
+              </li>
+              <li>
+                <strong>Budget-Aware Nutrition:</strong> Combining nutrition tracking with food affordability created a clear differentiator from traditional calorie-counting apps. Users could evaluate foods based on both nutritional value and real-world cost.
+              </li>
+              <li>
+                <strong>Simplified Nutrition Tracking:</strong> Focusing on a small set of essential metrics reduced cognitive overload and made the experience easier for everyday users to understand and adopt.
+              </li>
+              <li>
+                <strong>Consistent Visual Language:</strong> The soft gradients, rounded components, and playful aesthetic helped create a welcoming experience that aligned with the product's goal of making nutrition accessible.
+              </li>
+            </ul>
+          </div>
+          <div class="whatihad-reflection-row" id="challenges-learnings">
+            <h4>Challenges &amp; Learnings</h4>
+            <ul>
+              <li>
+                <strong>Performance vs Visual Design:</strong> Initially, glass-morphism was applied extensively throughout the interface. While visually appealing, it introduced unnecessary visual complexity and increased rendering overhead. Through iteration, I learned to use visual effects more intentionally and prioritize usability and performance over decoration.
+              </li>
+              <li>
+                <strong>Designing Simplicity:</strong> One of the biggest challenges was deciding what not to show. Nutrition data can quickly become overwhelming, so the design process focused heavily on identifying the information users actually need to make daily food decisions.
+              </li>
+              <li>
+                <strong>Information Hierarchy:</strong> Balancing nutrition metrics, budgeting insights, and AI recommendations required careful prioritization. Learning how users scan information helped create a clearer hierarchy and more focused screens.
+              </li>
+              <li>
+                <strong>Designing for Different Devices:</strong> Creating layouts that worked consistently across both Android and iPhone devices highlighted the importance of safe areas, spacing systems, touch targets, and responsive component behavior.
+              </li>
+            </ul>
+          </div>
+          <div class="whatihad-reflection-row" id="key-outcome">
+            <h4>Key Outcome</h4>
+            <ul>
+              <li>Designed a complete nutrition and budgeting experience from concept to implementation.</li>
+              <li>Created Bellyo, an AI mascot that adds personality and approachability to the product.</li>
+              <li>Developed a scalable design system for mobile interfaces.</li>
+              <li>Improved understanding of cross-platform mobile design considerations, including iOS safe areas and Android device variations.</li>
+              <li>Learned to balance aesthetics, usability, and technical constraints during product development.</li>
+              <li>Gained hands-on experience designing AI-assisted user experiences grounded in structured data.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section section-shell whatihad-final-takeaway" id="final-takeaway">
+        <h2 class="case-heading">Final Takeaway</h2>
+        <p>This project reinforced that great user experiences are not created by adding more features, but by helping users focus on what matters most. Through whatihad.info, I learned how thoughtful simplification, strong information hierarchy, and a distinct product personality can transform complex nutrition data into an experience that feels useful, approachable, and enjoyable to use.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer section-shell" id="play">
+      <p>Thanks for stopping by.</p>
+      <p>&copy; 2026 Advik Solanki</p>
+    </footer>
+
+    <script src="/script.js"></script>
+  </body>
+</html>

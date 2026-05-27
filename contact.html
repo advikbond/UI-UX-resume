@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact | Advik Solanki</title>
+    <meta name="description" content="Contact Advik Solanki for UI/UX, product design, internships, freelance work, and product ideas.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;400;500;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href="/" aria-label="Advik Solanki home" data-home-link>AS</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-links" id="primary-nav" aria-label="Portfolio sections">
+        <a class="mobile-home-link" href="/" data-section="home">Home</a>
+        <a href="/work" data-section="work">Work</a>
+        <a href="/contact" data-section="contact">Contact</a>
+        <a class="resume-download-link" href="/assets/Advik_Solanki_Resume.pdf" download data-section="resume">Resume</a>
+        <a href="/play" data-section="play">Play</a>
+      </nav>
+    </header>
+
+    <main class="standalone-page">
+      <section class="contact section-shell" id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
+        <div class="contact-copy">
+          <p>Let's build something meaningful together.</p>
+          <p>
+            Whether it's a full-time opportunity, internship, freelance project, or just an
+            interesting idea, I'd love to hear from you.
+          </p>
+        </div>
+        <div class="contact-actions">
+          <a class="contact-action" href="mailto:solankiadvik@gmail.com">
+            <img class="contact-action-icon" src="/assets/contact-gmail.svg" alt="" aria-hidden="true">
+            <span>solankiadvik@gmail.com</span>
+            <img class="contact-action-arrow" src="/assets/contact-arrow.svg" alt="" aria-hidden="true">
+          </a>
+          <a class="contact-action" href="https://www.linkedin.com/in/advik-solanki" target="_blank" rel="noreferrer">
+            <img class="contact-action-icon" src="/assets/contact-linkedin.svg" alt="" aria-hidden="true">
+            <span>linkedin</span>
+            <img class="contact-action-arrow" src="/assets/contact-arrow.svg" alt="" aria-hidden="true">
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer section-shell" id="play">
+      <p>Thanks for stopping by.</p>
+      <p>&copy; 2026 Advik Solanki</p>
+    </footer>
+
+    <script src="/script.js"></script>
+  </body>
+</html>

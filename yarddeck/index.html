@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Yard Deck | Advik Solanki</title>
+    <meta name="description" content="Yard Deck UI/UX case study by Advik Solanki.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;400;500;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href="/" aria-label="Advik Solanki home" data-home-link>AS</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-links" id="primary-nav" aria-label="Portfolio sections">
+        <a class="mobile-home-link" href="/" data-section="home">Home</a>
+        <a href="/work" data-section="work">Work</a>
+        <a href="/contact" data-section="contact">Contact</a>
+        <a class="resume-download-link" href="/assets/Advik_Solanki_Resume.pdf" download data-section="resume">Resume</a>
+        <a href="/play" data-section="play">Play</a>
+      </nav>
+    </header>
+
+    <aside class="case-toc" aria-label="Yard Deck page sections">
+      <button class="case-toc-toggle" type="button" aria-expanded="false" aria-controls="case-toc-menu">
+        Sections
+      </button>
+      <nav class="case-toc-menu" id="case-toc-menu">
+        <a href="#case-top">Overview</a>
+        <a class="case-toc-sub" href="#platform-link">Platform Link</a>
+        <a class="case-toc-sub" href="#project-info">Info</a>
+        <a class="case-toc-sub" href="#impact">Impact</a>
+        <a class="case-toc-sub" href="#my-contribution">My Contribution</a>
+        <a href="#ui-exploration">UI Exploration</a>
+        <a href="#case-overview">Problem &amp; Goal</a>
+        <a class="case-toc-sub" href="#problem">Problem</a>
+        <a class="case-toc-sub" href="#goal">The Goal</a>
+        <a class="case-toc-sub" href="#outcome">Outcome</a>
+        <a href="#research-discovery">Research &amp; Discovery</a>
+        <a class="case-toc-sub" href="#organizers-needed">Organizers Needed</a>
+        <a class="case-toc-sub" href="#players-needed">Players Needed</a>
+        <a href="#solution">Solution</a>
+        <a class="case-toc-sub" href="#centralized-platform">Centralized Platform</a>
+        <a class="case-toc-sub" href="#tournament-discovery">Tournament Discovery</a>
+        <a class="case-toc-sub" href="#registration-waitlist">Registration &amp; Waitlist</a>
+        <a class="case-toc-sub" href="#live-scoring">Live Scoring</a>
+        <a class="case-toc-sub" href="#rankings-profiles">Rankings &amp; Profiles</a>
+        <a class="case-toc-sub" href="#integrated-payments">Integrated Payments</a>
+        <a href="#information-architecture">Information Architecture</a>
+        <a href="#reflection">Reflection</a>
+        <a class="case-toc-sub" href="#what-worked-well">What Worked Well</a>
+        <a class="case-toc-sub" href="#challenges-learnings">Challenges &amp; Learnings</a>
+        <a class="case-toc-sub" href="#key-outcome">Key Outcome</a>
+        <a href="#what-i-learned">What I Learned</a>
+      </nav>
+    </aside>
+
+    <main class="case-page yarddeck-page">
+      <section class="case-section section-shell case-hero yarddeck-hero" id="case-top">
+        <h1>Yard Deck</h1>
+        <figure class="yarddeck-hero-media">
+          <img src="/assets/yarddeck/hero.png" width="1536" height="1024" alt="Yard Deck tournament platform displayed on desktop and mobile devices">
+        </figure>
+        <div class="case-facts">
+          <div class="case-row" id="platform-link">
+            <h3>Platform Link</h3>
+            <p>
+              <a class="case-link" href="https://yarddeck.in/" target="_blank" rel="noreferrer">www.yarddeck.in</a>
+              <img class="whatihad-link-arrow" src="/assets/work-arrow.svg" alt="" aria-hidden="true">
+            </p>
+          </div>
+          <div class="case-row" id="project-info">
+            <h3>Info</h3>
+            <div>
+              <p>White-Label Sports Tournament Platform</p>
+              <p>A responsive tournament management platform designed for sports organizers and companies to manage registrations, rankings, payments, waitlists, live scoring, and competitive community engagement through a centralized digital experience.</p>
+            </div>
+          </div>
+          <div class="case-row" id="platform">
+            <h3>Platform</h3>
+            <p>Responsive Website</p>
+          </div>
+          <div class="case-row" id="impact">
+            <h3>Impact</h3>
+            <ul>
+              <li>400+ event registrations across 3 live sports events</li>
+              <li>Centralized tournament registrations, rankings, payments, and live scoring</li>
+              <li>Reduced manual operational workload for organizers</li>
+              <li>Improved tournament participation and onboarding experience for players</li>
+              <li>Enabled real-time tournament communication and updates</li>
+            </ul>
+          </div>
+          <div class="case-row" id="my-contribution">
+            <h3>My Contribution</h3>
+            <div class="yarddeck-contribution">
+              <p>My Contributions</p>
+              <ul>
+                <li>Product strategy &amp; UX planning</li>
+                <li>End-to-end website UI/UX design</li>
+                <li>Brand identity and visual direction</li>
+                <li>Tournament registration flow design</li>
+                <li>Information architecture</li>
+                <li>Mobile-responsive layout design</li>
+                <li>Player onboarding experience</li>
+                <li>Tournament state system design</li>
+                <li>Rankings and profile UX</li>
+                <li>User flow optimization</li>
+                <li>Frontend development using Codex</li>
+              </ul>
+              <p>Payments Integration</p>
+              <ul>
+                <li>Integrated secure payments using Cashfree Payments</li>
+                <li>Designed payment success, failure, and retry flows</li>
+                <li>Reduced manual payment verification for organizers</li>
+                <li>Improved tournament registration experience for players</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section section-shell" id="ui-exploration">
+        <h2 class="case-heading">UI Exploration</h2>
+        <div class="yarddeck-ui-exploration">
+          <img src="/assets/yarddeck/ui-exploration.png" width="1397" height="500" alt="Yard Deck UI exploration showing typography, colors, buttons, status badges, and logo direction">
+        </div>
+      </section>
+
+      <section class="case-section section-shell" id="case-overview">
+        <h2 class="case-heading">Overview</h2>
+        <div class="case-facts">
+          <div class="case-row" id="problem">
+            <h3>Problem</h3>
+            <div>
+              <p>Tournament organizers struggled with:</p>
+              <ul>
+                <li>Manual player registrations</li>
+                <li>Managing tournament waitlists</li>
+                <li>Tracking payments and confirmations</li>
+                <li>Updating player rankings manually</li>
+                <li>Sharing tournament updates through WhatsApp groups</li>
+                <li>Managing live tournament communication</li>
+                <li>Lack of a professional tournament platform</li>
+              </ul>
+            </div>
+          </div>
+          <div class="case-row" id="goal">
+            <h3>The Goal</h3>
+            <div>
+              <p>The platform aimed to:</p>
+              <ul>
+                <li>Centralize tournament registrations, rankings, payments, and live scoring</li>
+                <li>Improve tournament discovery and onboarding</li>
+                <li>Simplify organizer workflows</li>
+                <li>Create a professional digital tournament experience</li>
+                <li>Support multiple organizers through reusable platform infrastructure</li>
+                <li>Deliver a responsive mobile-first web experience</li>
+                <li>Improve communication and engagement during live tournaments</li>
+              </ul>
+            </div>
+          </div>
+          <div class="case-row" id="outcome">
+            <h3>Outcome</h3>
+            <ul>
+              <li>400+ event registrations across 3 live sports events</li>
+              <li>Centralized registrations, payments, rankings, and live updates</li>
+              <li>Reduced manual operational workload for organizers</li>
+              <li>Improved tournament participation and onboarding experience</li>
+              <li>Simplified waitlist and tournament state management</li>
+              <li>Enabled real-time scoring and tournament communication</li>
+              <li>Created reusable tournament infrastructure for multiple organizations</li>
+              <li>Delivered a scalable mobile-responsive sports platform experience</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section section-shell" id="research-discovery">
+        <h2 class="case-heading">Research &amp; Discovery</h2>
+        <div class="case-card-grid case-card-grid-stakeholders">
+          <article id="organizers-needed">
+            <h3>Organizers Needed</h3>
+            <ul>
+              <li>Faster tournament setup</li>
+              <li>Automated registration workflows</li>
+              <li>Integrated payment systems</li>
+              <li>Centralized player data</li>
+              <li>Real-time tournament operations</li>
+              <li>Scalable infrastructure for multiple events</li>
+            </ul>
+          </article>
+          <article id="players-needed">
+            <h3>Players Needed</h3>
+            <ul>
+              <li>Simple registration experiences</li>
+              <li>Real-time tournament updates</li>
+              <li>Transparent tournament information</li>
+              <li>Easy mobile access</li>
+              <li>Player rankings and participation history</li>
+              <li>Reliable tournament communication</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="case-section section-shell" id="solution">
+        <h2 class="case-heading">Solution</h2>
+        <div class="case-facts">
+          <div class="case-row" id="centralized-platform">
+            <h3>Centralized Tournament Platform</h3>
+            <p>Designed a reusable tournament ecosystem that allows multiple sports organizations to manage tournaments through a single infrastructure.</p>
+          </div>
+          <div class="case-row" id="tournament-discovery">
+            <h3>Tournament Discovery</h3>
+            <p>Created a streamlined browsing experience for tournaments, prize pools, formats, schedules, and locations.</p>
+          </div>
+          <div class="case-row" id="registration-waitlist">
+            <h3>Registration &amp; Waitlist System</h3>
+            <p>Designed simplified onboarding and registration workflows with OTP verification, skill-level selection, waitlist management, and automated confirmations.</p>
+          </div>
+          <div class="case-row" id="live-scoring">
+            <h3>Live Scoring &amp; Match Updates</h3>
+            <p>Built real-time tournament state experiences to improve player engagement during live competitions.</p>
+          </div>
+          <div class="case-row" id="rankings-profiles">
+            <h3>Rankings &amp; Player Profiles</h3>
+            <p>Designed player ranking systems and participation tracking to encourage long-term engagement and competitive progression.</p>
+          </div>
+          <div class="case-row" id="integrated-payments">
+            <h3>Integrated Payments</h3>
+            <p>Enabled seamless online tournament registration payments and automated confirmations using Cashfree.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section section-shell" id="information-architecture">
+        <h2 class="case-heading">Information Architecture</h2>
+        <div class="yarddeck-information-architecture">
+          <img src="/assets/yarddeck/information-architecture.png" width="1397" height="1514" alt="Yard Deck information architecture sitemap showing navigation, tournaments, rankings, about, and account flows">
+        </div>
+      </section>
+
+      <section class="case-section section-shell whatihad-reflection" id="reflection">
+        <h2 class="case-heading">Reflection</h2>
+        <div class="whatihad-reflection-stack">
+          <div class="whatihad-reflection-row yarddeck-reflection-row" id="what-worked-well">
+            <h4>What Worked Well</h4>
+            <ul>
+              <li>Simplified registration flows improved participation</li>
+              <li>Mobile-first layouts improved accessibility</li>
+              <li>Tournament state systems reduced confusion</li>
+              <li>Integrated payments streamlined organizer operations</li>
+              <li>Strong sports branding improved engagement and community feel</li>
+            </ul>
+          </div>
+          <div class="whatihad-reflection-row yarddeck-reflection-row" id="challenges-learnings">
+            <h4>Challenges &amp; Learnings</h4>
+            <ul>
+              <li>Managing multiple tournament states within a clean interface</li>
+              <li>Balancing energetic visuals with functional usability</li>
+              <li>Designing reusable systems for different organizers</li>
+              <li>Maintaining clarity across information-heavy mobile screens</li>
+            </ul>
+          </div>
+          <div class="whatihad-reflection-row yarddeck-reflection-row" id="key-outcome">
+            <h4>Key Outcome</h4>
+            <ul>
+              <li>Designed and shipped a responsive tournament platform for real events.</li>
+              <li>Created a reusable white-label structure for multiple sports organizers.</li>
+              <li>Integrated registration, waitlist, payment, ranking, and live update workflows into one experience.</li>
+              <li>Improved tournament operations by reducing manual coordination and payment verification.</li>
+              <li>Built a sports-focused visual system that supports clarity, momentum, and community engagement.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section section-shell whatihad-final-takeaway" id="what-i-learned">
+        <h2 class="case-heading">What I Learned</h2>
+        <p>This project taught me that sports platforms need to balance clarity, speed, and excitement at the same time. I learned how strong information hierarchy and state-based UX can significantly improve tournament experiences, especially on mobile devices. Designing Yard Deck as a reusable platform instead of a single-event solution also showed me the long-term value of scalable systems and community-focused branding.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer section-shell" id="play">
+      <p>Thanks for stopping by.</p>
+      <p>&copy; 2026 Advik Solanki</p>
+    </footer>
+
+    <script src="/script.js"></script>
+  </body>
+</html>

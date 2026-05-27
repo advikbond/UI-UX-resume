@@ -1,0 +1,13 @@
+<svg width="2048" height="553" viewBox="0 0 2048 553" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="2048" height="553" fill="#FFFFFF"/>
+  <rect x="1737" width="311" height="112" fill="#0C8CE9"/>
+  <rect y="453" width="313" height="100" fill="#5C5C5C"/>
+  <rect x="1020" y="483" width="1028" height="70" fill="#F8F9FA"/>
+  <text x="6" y="48" fill="#000000" font-family="JetBrains Mono, Courier New, monospace" font-size="32">#FFFFFF</text>
+  <text x="1902" y="101" fill="#000000" font-family="JetBrains Mono, Courier New, monospace" font-size="32">#0C8CE9</text>
+  <text x="0" y="542" fill="#000000" font-family="JetBrains Mono, Courier New, monospace" font-size="32">#5C5C5C</text>
+  <text x="1902" y="542" fill="#000000" font-family="JetBrains Mono, Courier New, monospace" font-size="32">#F8F9FA</text>
+  <text x="210" y="202" fill="#000000" font-family="Impact, Arial Black, sans-serif" font-size="58" font-weight="700">Jaro</text>
+  <text x="1778" y="390" fill="#000000" font-family="Inter, Arial, sans-serif" font-size="58">Inter</text>
+  <image href="logo-full.svg" x="604" y="193" width="840" height="168" preserveAspectRatio="xMidYMid meet"/>
+</svg>
