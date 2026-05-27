@@ -25,17 +25,18 @@ if (cricketRoot) {
   const statThree = cricketRoot.querySelector("[data-cricket-stat-three]");
 
   const deliveries = [
-    { name: "Yorker", speed: 1.9, swing: 0, bounce: 0.05, pitch: 0.9, line: 0 },
-    { name: "Bouncer", speed: 1.8, swing: 0, bounce: 0.6, pitch: 0.5, line: 0 },
-    { name: "Good Length", speed: 1.55, swing: 0, bounce: 0.28, pitch: 0.72, line: 0 },
-    { name: "Inswing", speed: 1.6, swing: -0.3, bounce: 0.2, pitch: 0.74, line: 0 },
-    { name: "Outswing", speed: 1.6, swing: 0.3, bounce: 0.2, pitch: 0.74, line: 0 },
-    { name: "Slower Ball", speed: 1.05, swing: 0.1, bounce: 0.22, pitch: 0.73, line: 0 },
-    { name: "Off Spin", speed: 0.88, swing: 0.36, bounce: 0.18, pitch: 0.66, line: 0.1 },
-    { name: "Leg Spin", speed: 0.84, swing: -0.34, bounce: 0.2, pitch: 0.64, line: -0.1 },
+    { name: "Yorker", speed: 2.38, swing: 0, bounce: 0.05, pitch: 0.9, line: 0 },
+    { name: "Bouncer", speed: 2.9, swing: 0, bounce: 0.6, pitch: 0.5, line: 0 },
+    { name: "Good Length", speed: 2.5, swing: 0, bounce: 0.28, pitch: 0.72, line: 0 },
+    { name: "Inswing", speed: 2.3, swing: -0.3, bounce: 0.2, pitch: 0.74, line: 0 },
+    { name: "Outswing", speed: 2.3, swing: 0.3, bounce: 0.2, pitch: 0.74, line: 0 },
+    { name: "Slower Ball", speed: 1.8, swing: 0.1, bounce: 0.22, pitch: 0.73, line: 0 },
+    { name: "Off Spin", speed: 1.1, swing: 0.36, bounce: 0.18, pitch: 0.66, line: 0.03 },
+    { name: "Leg Spin", speed: 1.05, swing: -0.34, bounce: 0.2, pitch: 0.64, line: -0.03 },
     { name: "Top Spin", speed: 0.95, swing: 0, bounce: 0.38, pitch: 0.68, line: 0 },
     { name: "Flight", speed: 0.72, swing: 0.24, bounce: 0.18, pitch: 0.58, line: 0 }
   ];
+  const deliverySlowdown = 1.5;
 
   const state = {
     mode: "idle",
@@ -196,7 +197,7 @@ if (cricketRoot) {
     state.shake = 0;
     state.flash = 0;
     state.lockInput = false;
-    instructionEl.textContent = "Click or press Space to bat";
+    instructionEl.textContent = "Space or tap to bat";
     buildBallRow();
     updateHud();
   }
@@ -211,7 +212,7 @@ if (cricketRoot) {
     state.shake = 0;
     state.flash = 0;
     state.lockInput = false;
-    instructionEl.textContent = "Press Space to play";
+    instructionEl.textContent = "Space or tap to play";
     messageEl.style.opacity = "0";
     submessageEl.style.opacity = "0";
     startScreen.hidden = false;
@@ -246,7 +247,8 @@ if (cricketRoot) {
     const d = state.currentDelivery;
     state.phase = "delivery";
     state.deliveryTick = 0;
-    state.deliveryDuration = Math.round((d.speed > 1.3 ? 70 : 112) / d.speed);
+    const fieldScale = Math.max(0.9, Math.min(1.55, height() / 620));
+    state.deliveryDuration = Math.round(((d.speed > 1.3 ? 70 : 112) / d.speed) * deliverySlowdown * fieldScale);
     state.ball.visible = true;
     state.ball.x = state.bowler.x;
     state.ball.y = state.bowler.y;
