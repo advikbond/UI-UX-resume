@@ -247,8 +247,7 @@ if (cricketRoot) {
     const d = state.currentDelivery;
     state.phase = "delivery";
     state.deliveryTick = 0;
-    const fieldScale = Math.max(0.9, Math.min(1.55, height() / 620));
-    state.deliveryDuration = Math.round(((d.speed > 1.3 ? 70 : 112) / d.speed) * deliverySlowdown * fieldScale);
+    state.deliveryDuration = Math.round(((d.speed > 1.3 ? 70 : 112) / d.speed) * deliverySlowdown);
     state.ball.visible = true;
     state.ball.x = state.bowler.x;
     state.ball.y = state.bowler.y;
