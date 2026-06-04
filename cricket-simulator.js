@@ -37,6 +37,7 @@ if (cricketRoot) {
     { name: "Flight", speed: 1.08, swing: 0.24, bounce: 0.18, pitch: 0.58, line: 0 }
   ];
   const deliverySlowdown = 1.5;
+  const hitTravelSpeed = 1.5;
 
   const state = {
     mode: "idle",
@@ -287,10 +288,10 @@ if (cricketRoot) {
       active: true,
       x: p.cx,
       y: p.top + p.height * 0.86,
-      vx: direction[0] * 0.07 * power,
-      vy: direction[1] * 0.07 * power,
+      vx: direction[0] * 0.07 * power * hitTravelSpeed,
+      vy: direction[1] * 0.07 * power * hitTravelSpeed,
       height: 0,
-      vh: quality === "perfect" ? 10 : quality === "good" ? 6 : 2,
+      vh: (quality === "perfect" ? 10 : quality === "good" ? 6 : 2) * hitTravelSpeed,
       tick: 0
     };
   }
@@ -607,7 +608,7 @@ if (cricketRoot) {
       }
       if (!state.hit.active && !state.swinging && state.mode === "playing") {
         state.phase = "wait";
-        state.wait = 74;
+        state.wait = 37;
         state.lockInput = false;
         state.trail = [];
       }
