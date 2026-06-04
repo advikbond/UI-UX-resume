@@ -1824,7 +1824,7 @@ img {
   }
 
   .cricket-game {
-    min-height: 640px;
+    min-height: 680px;
   }
 
   .cricket-hud {
@@ -1887,7 +1887,7 @@ img {
 
 @media (max-width: 640px) {
   .cricket-game {
-    min-height: 620px;
+    min-height: 680px;
   }
 
   .cricket-hud {

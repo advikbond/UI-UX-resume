@@ -37,7 +37,6 @@ if (cricketRoot) {
     { name: "Flight", speed: 0.72, swing: 0.24, bounce: 0.18, pitch: 0.58, line: 0 }
   ];
   const deliverySlowdown = 1.5;
-  const desktopPitchHeight = 680 * 0.67;
 
   const state = {
     mode: "idle",
@@ -248,8 +247,7 @@ if (cricketRoot) {
     const d = state.currentDelivery;
     state.phase = "delivery";
     state.deliveryTick = 0;
-    const desktopSpeedScale = p.height / desktopPitchHeight;
-    state.deliveryDuration = Math.round(((d.speed > 1.3 ? 70 : 112) / d.speed) * deliverySlowdown * desktopSpeedScale);
+    state.deliveryDuration = Math.round(((d.speed > 1.3 ? 70 : 112) / d.speed) * deliverySlowdown);
     state.ball.visible = true;
     state.ball.x = state.bowler.x;
     state.ball.y = state.bowler.y;
