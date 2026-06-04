@@ -34,10 +34,11 @@ if (cricketRoot) {
     { name: "Off Spin", speed: 1.65, swing: 0.36, bounce: 0.18, pitch: 0.66, line: 0.03 },
     { name: "Leg Spin", speed: 1.58, swing: -0.34, bounce: 0.2, pitch: 0.64, line: -0.03 },
     { name: "Top Spin", speed: 1.43, swing: 0, bounce: 0.38, pitch: 0.68, line: 0 },
-    { name: "Flight", speed: 1.08, swing: 0.24, bounce: 0.18, pitch: 0.58, line: 0 }
+    { name: "Flight", speed: 1.28, swing: 0.24, bounce: 0.18, pitch: 0.58, line: 0 }
   ];
   const deliverySlowdown = 1.5;
   const hitTravelSpeed = 1.5;
+  const nextBallDelay = 180;
 
   const state = {
     mode: "idle",
@@ -608,7 +609,7 @@ if (cricketRoot) {
       }
       if (!state.hit.active && !state.swinging && state.mode === "playing") {
         state.phase = "wait";
-        state.wait = 37;
+        state.wait = nextBallDelay;
         state.lockInput = false;
         state.trail = [];
       }
