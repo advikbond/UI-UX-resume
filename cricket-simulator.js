@@ -25,14 +25,14 @@ if (cricketRoot) {
   const statThree = cricketRoot.querySelector("[data-cricket-stat-three]");
 
   const deliveries = [
-    { name: "Yorker", speed: 3.57, swing: 0, bounce: 0.05, pitch: 0.9, line: 0 },
-    { name: "Bouncer", speed: 4.35, swing: 0, bounce: 0.6, pitch: 0.5, line: 0 },
-    { name: "Good Length", speed: 3.75, swing: 0, bounce: 0.28, pitch: 0.72, line: 0 },
-    { name: "Inswing", speed: 3.45, swing: -0.3, bounce: 0.2, pitch: 0.74, line: 0 },
-    { name: "Outswing", speed: 3.45, swing: 0.3, bounce: 0.2, pitch: 0.74, line: 0 },
+    { name: "Yorker", speed: 2.57, swing: 0, bounce: 0.05, pitch: 0.9, line: 0 },
+    { name: "Bouncer", speed: 2.35, swing: 0, bounce: 0.6, pitch: 0.5, line: 0 },
+    { name: "Good Length", speed: 2.75, swing: 0, bounce: 0.28, pitch: 0.72, line: 0 },
+    { name: "Inswing", speed: 2.45, swing: -0.34, bounce: 0.2, pitch: 0.74, line: 0 },
+    { name: "Outswing", speed: 2.45, swing: 0.36, bounce: 0.2, pitch: 0.74, line: 0 },
     { name: "Slower Ball", speed: 2.7, swing: 0.1, bounce: 0.22, pitch: 0.73, line: 0 },
-    { name: "Off Spin", speed: 1.65, swing: 0.36, bounce: 0.18, pitch: 0.66, line: 0.03 },
-    { name: "Leg Spin", speed: 1.58, swing: -0.34, bounce: 0.2, pitch: 0.64, line: -0.03 },
+    { name: "Off Spin", speed: 1.65, swing: 0.2, bounce: 0.18, pitch: 0.66, line: 0.03 },
+    { name: "Leg Spin", speed: 1.58, swing: -0.24, bounce: 0.2, pitch: 0.64, line: -0.03 },
     { name: "Top Spin", speed: 1.43, swing: 0, bounce: 0.38, pitch: 0.68, line: 0 },
     { name: "Flight", speed: 1.28, swing: 0.24, bounce: 0.18, pitch: 0.58, line: 0 }
   ];
