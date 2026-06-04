@@ -26,19 +26,21 @@ if (cricketRoot) {
 
   const deliveries = [
     { name: "Yorker", speed: 2.57, swing: 0, bounce: 0.05, pitch: 0.9, line: 0 },
-    { name: "Bouncer", speed: 2.35, swing: 0, bounce: 0.6, pitch: 0.5, line: 0 },
-    { name: "Good Length", speed: 2.75, swing: 0, bounce: 0.28, pitch: 0.72, line: 0 },
-    { name: "Inswing", speed: 2.45, swing: -0.34, bounce: 0.2, pitch: 0.74, line: 0 },
-    { name: "Outswing", speed: 2.45, swing: 0.36, bounce: 0.2, pitch: 0.74, line: 0 },
+    { name: "Bouncer", speed: 2.15, swing: 0, bounce: 0.6, pitch: 0.5, line: 0 },
+    { name: "Good Length", speed: 2.85, swing: 0, bounce: 0.28, pitch: 0.72, line: 0 },
+    { name: "Inswing", speed: 2.45, swing: -0.2, bounce: 0.2, pitch: 0.74, line: 0 },
+    { name: "Outswing", speed: 2.45, swing: 0.2, bounce: 0.2, pitch: 0.74, line: 0 },
     { name: "Slower Ball", speed: 2.7, swing: 0.1, bounce: 0.22, pitch: 0.73, line: 0 },
     { name: "Off Spin", speed: 1.65, swing: 0.2, bounce: 0.18, pitch: 0.66, line: 0.03 },
-    { name: "Leg Spin", speed: 1.58, swing: -0.24, bounce: 0.2, pitch: 0.64, line: -0.03 },
+    { name: "Leg Spin", speed: 1.58, swing: -0.2, bounce: 0.2, pitch: 0.64, line: -0.03 },
     { name: "Top Spin", speed: 1.43, swing: 0, bounce: 0.38, pitch: 0.68, line: 0 },
     { name: "Flight", speed: 1.28, swing: 0.24, bounce: 0.18, pitch: 0.58, line: 0 }
   ];
   const deliverySlowdown = 1.5;
   const hitTravelSpeed = 1.5;
   const nextBallDelay = 180;
+  const frameMs = 1000 / 60;
+  let lastFrameTime = 0;
 
   const state = {
     mode: "idle",
@@ -555,16 +557,16 @@ if (cricketRoot) {
     });
   }
 
-  function updateGame() {
+  function updateGame(step = 1) {
     if (state.mode !== "playing") return;
     if (state.phase === "wait") {
-      state.wait -= 1;
+      state.wait -= step;
       if (state.wait <= 0) nextDelivery();
     }
 
     if (state.phase === "runup") {
       const p = pitch();
-      state.runup += 1;
+      state.runup += step;
       state.bowler.y = lerp(p.top - height() * 0.06, p.top + p.height * 0.13, clamp(state.runup / 48, 0, 1));
       if (state.runup >= 48) launchBall();
     }
@@ -572,7 +574,7 @@ if (cricketRoot) {
     if (state.phase === "delivery") {
       const p = pitch();
       const d = state.currentDelivery;
-      state.deliveryTick += 1;
+      state.deliveryTick += step;
       const half = state.deliveryDuration / 2;
       if (state.deliveryTick < half) {
         const t = state.deliveryTick / half;
@@ -589,16 +591,16 @@ if (cricketRoot) {
 
     if (state.phase === "travel") {
       if (state.swinging) {
-        state.batSwing = clamp(state.batSwing + 0.08, 0, 1);
+        state.batSwing = clamp(state.batSwing + 0.08 * step, 0, 1);
         if (state.batSwing >= 1) state.swinging = false;
       }
       if (state.hit.active) {
-        state.hit.tick += 1;
-        state.hit.x += state.hit.vx;
-        state.hit.y += state.hit.vy;
-        state.hit.vy += 0.055;
-        state.hit.height += state.hit.vh;
-        state.hit.vh -= 0.18;
+        state.hit.tick += step;
+        state.hit.x += state.hit.vx * step;
+        state.hit.y += state.hit.vy * step;
+        state.hit.vy += 0.055 * step;
+        state.hit.height += state.hit.vh * step;
+        state.hit.vh -= 0.18 * step;
         if (state.hit.height < 0) {
           state.hit.height = 0;
           state.hit.vh *= -0.4;
@@ -616,20 +618,24 @@ if (cricketRoot) {
     }
 
     state.particles = state.particles.filter((particle) => {
-      particle.x += particle.vx;
-      particle.y += particle.vy;
-      particle.vx *= 0.92;
-      particle.vy = particle.vy * 0.92 + 0.12;
-      particle.life -= 1;
+      particle.x += particle.vx * step;
+      particle.y += particle.vy * step;
+      const drag = Math.pow(0.92, step);
+      particle.vx *= drag;
+      particle.vy = particle.vy * drag + 0.12 * step;
+      particle.life -= step;
       return particle.life > 0;
     });
 
-    state.shake *= 0.82;
-    state.flash = Math.max(0, state.flash - 1);
+    state.shake *= Math.pow(0.82, step);
+    state.flash = Math.max(0, state.flash - step);
   }
 
-  function render() {
+  function render(timestamp = 0) {
     requestAnimationFrame(render);
+    const elapsed = lastFrameTime ? timestamp - lastFrameTime : frameMs;
+    const step = clamp(elapsed / frameMs, 0.5, 2);
+    lastFrameTime = timestamp;
     ctx.clearRect(0, 0, width(), height());
     ctx.save();
     if (state.shake > 0.5) {
@@ -654,7 +660,7 @@ if (cricketRoot) {
       }
     }
     ctx.restore();
-    updateGame();
+    updateGame(step);
   }
 
   function start() {
