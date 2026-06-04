@@ -181,6 +181,31 @@ if (cricketRoot) {
     }
   }
 
+  function clearConfetti() {
+    endScreen.querySelectorAll(".cricket-confetti").forEach((confetti) => confetti.remove());
+  }
+
+  function launchConfetti() {
+    clearConfetti();
+    const confettiLayer = document.createElement("div");
+    confettiLayer.className = "cricket-confetti";
+    const colors = ["#ffe066", "#66ffcc", "#ff7ab6", "#8fb8ff", "#ffffff"];
+
+    for (let index = 0; index < 70; index += 1) {
+      const piece = document.createElement("span");
+      piece.style.setProperty("--x", `${randomBetween(0, 100)}%`);
+      piece.style.setProperty("--delay", `${randomBetween(0, 0.55)}s`);
+      piece.style.setProperty("--duration", `${randomBetween(1.8, 3.2)}s`);
+      piece.style.setProperty("--drift", `${randomBetween(-120, 120)}px`);
+      piece.style.setProperty("--spin", `${randomBetween(220, 680)}deg`);
+      piece.style.background = colors[randomInt(0, colors.length - 1)];
+      confettiLayer.append(piece);
+    }
+
+    endScreen.prepend(confettiLayer);
+    window.setTimeout(clearConfetti, 4200);
+  }
+
   function resetGame() {
     state.mode = "playing";
     state.phase = "wait";
@@ -202,6 +227,8 @@ if (cricketRoot) {
     state.flash = 0;
     state.lockInput = false;
     instructionEl.textContent = "Space or tap to bat";
+    clearConfetti();
+    endScreen.classList.remove("cricket-screen-win", "cricket-screen-loss");
     buildBallRow();
     updateHud();
   }
@@ -219,6 +246,8 @@ if (cricketRoot) {
     instructionEl.textContent = "Space or tap to play";
     messageEl.style.opacity = "0";
     submessageEl.style.opacity = "0";
+    clearConfetti();
+    endScreen.classList.remove("cricket-screen-win", "cricket-screen-loss");
     startScreen.hidden = false;
     endScreen.hidden = true;
   }
@@ -273,7 +302,11 @@ if (cricketRoot) {
     statOne.textContent = `Strike rate ${strikeRate}`;
     statTwo.textContent = `Shot accuracy ${accuracy}%`;
     statThree.textContent = `${state.fours} fours · ${state.sixes} sixes · ${state.perfects} perfect`;
+    clearConfetti();
+    endScreen.classList.toggle("cricket-screen-win", won);
+    endScreen.classList.toggle("cricket-screen-loss", !won);
     endScreen.hidden = false;
+    if (won) launchConfetti();
   }
 
   function maybeEnd() {

@@ -1754,6 +1754,11 @@ img {
   text-align: center;
 }
 
+.cricket-screen-end {
+  border: 1px solid transparent;
+  transition: border-color 180ms ease;
+}
+
 .cricket-screen[hidden] {
   display: none;
 }
@@ -1806,6 +1811,55 @@ img {
   color: #fff;
   font-size: clamp(32px, 4vw, 56px);
   line-height: 1;
+}
+
+.cricket-screen-loss {
+  border-color: #ff4545;
+  box-shadow: inset 0 0 0 1px rgba(255, 69, 69, 0.35), inset 0 0 80px rgba(255, 69, 69, 0.12);
+}
+
+.cricket-screen-loss h3,
+.cricket-screen-loss strong {
+  color: #ff4545;
+  text-shadow: 0 0 34px rgba(255, 69, 69, 0.38);
+}
+
+.cricket-screen-loss p {
+  color: rgba(255, 105, 105, 0.78);
+}
+
+.cricket-confetti {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.cricket-confetti span {
+  position: absolute;
+  top: -18px;
+  left: var(--x);
+  width: 8px;
+  height: 14px;
+  opacity: 0;
+  transform: translate3d(0, -20px, 0) rotate(0deg);
+  animation: cricket-confetti-fall var(--duration) var(--delay) ease-in forwards;
+}
+
+@keyframes cricket-confetti-fall {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -20px, 0) rotate(0deg);
+  }
+
+  12% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(var(--drift), 720px, 0) rotate(var(--spin));
+  }
 }
 
 .cricket-end-stats {
