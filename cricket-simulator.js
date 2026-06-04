@@ -38,7 +38,7 @@ if (cricketRoot) {
   ];
   const deliverySlowdown = 1.5;
   const hitTravelSpeed = 1.5;
-  const nextBallDelay = 45;
+  const nextBallDelay = 27;
   const frameMs = 1000 / 60;
   let lastFrameTime = 0;
 
